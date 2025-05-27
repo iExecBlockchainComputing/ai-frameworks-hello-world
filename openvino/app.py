@@ -8,13 +8,6 @@ from pathlib import Path
 
 print(ov.__version__)
 
-# Fetch `notebook_utils` module
-import urllib.request
-urllib.request.urlretrieve(
-    url='https://raw.githubusercontent.com/openvinotoolkit/openvino_notebooks/main/notebooks/utils/notebook_utils.py',
-    filename='notebook_utils.py'
-)
-
 from notebook_utils import download_file
 
 base_model_dir = Path("./model").expanduser()

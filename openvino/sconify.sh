@@ -11,22 +11,26 @@ IMG_TO=aimendjari/${IMG_NAME}:1.0.0-debug
 # Run the sconifier to build the TEE image based on the non-TEE image
 docker run -it \
             -v /var/run/docker.sock:/var/run/docker.sock \
-            registry.scontain.com/scone-production/iexec-sconify-image:5.9.0-v15 \
-	    sconify_iexec \
+            registry.scontain.com/scone-production/iexec-sconify-image:5.9.1-v15 \
+            sconify_iexec \
             --name=${IMG_NAME} \
-	    --from=${IMG_FROM} \
+            --from=${IMG_FROM} \
             --to=${IMG_TO} \
-	    --base=python:3.9-bullseye \
+            --base=debian:bullseye-slim \
             --binary-fs \
             --fs-dir=/app \
             --host-path=/etc/hosts \
             --host-path=/etc/resolv.conf \
+            --host-path=/tmp \
+            --host-path=/etc/passwd \
+            --host-path=/etc/group \
             --binary=/usr/local/bin/python3 \
-            --disable-binary-symlink-detection \
-	    --heap=4G \
+            --heap=4294967296 \
             --dlopen=1 \
             --no-color \
             --verbose \
+            --env HOME=/root \
+            --env TMPDIR=/tmp \
             --command=${ENTRYPOINT} \
             && echo -e "\n------------------\n" \
             && echo "successfully built TEE docker image => ${IMG_TO}" \

@@ -6,8 +6,6 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Install dependencies
 RUN apt-get update && apt-get install -y \
     wget \
-    curl \
-    git \ 
     && rm -rf /var/lib/apt/lists/*
 
 # Install Python dependencies

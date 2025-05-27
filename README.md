@@ -46,9 +46,9 @@ Each `app.py` file contains a minimal script that initializes and runs a simple 
 |------------|----------------|---------------|------------------------|
 | TensorFlow | 2.19.0         | ✅ Supported   | –                      |
 | PyTorch    | 2.7.0+cu126    | ✅ Supported   | –                      |
-| Scikit-Learn | 1.6.1        | ✅ Supported   | `sconify.sh` included, but execution issues on SGX |
+| Scikit-Learn | 1.6.1        | ✅ Supported   | ✅ Supported `sconify.sh` included |
 | OpenVINO   | 2024.6.0       | ✅ Supported   | `sconify.sh` included, but execution issues on SGX |
-| NumPy      | 2.0.2          | ✅ Supported   | `sconify.sh` included, but execution issues on SGX |
+| NumPy      | 2.0.2          | ✅ Supported   | ✅ Supported `sconify.sh` included |
 
 ---
 
