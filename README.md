@@ -4,9 +4,9 @@ This repository provides minimal **"Hello, World!"** examples for several popula
 
 These examples are designed to:
 
-- Quickly test basic functionality of each framework
-- Run inside containerized environments
-- **Work with Intel® TDX (Trust Domain Extensions)** out of the box
+- ✅ Dockerized for reproducible, isolated testing
+- ✅ Designed for **Intel® TDX (Trust Domain Extensions)** compatibility
+- ✅ Tested on the **iExec Confidential Computing infrastructure**
 
 > ⚠️ While some frameworks include a `sconify.sh` script for SGX compatibility, **execution support is currently verified only for TDX**. See notes below.
 
@@ -86,9 +86,9 @@ For frameworks with `sconify.sh`, you can attempt to prepare the image for SCONE
 - Python 3 is used in all images
 - Designed for experimentation and integration in confidential computing pipelines
 - All containers are based on compatible and minimal Linux images to ensure reproducibility and compatibility with Intel TDX. The following base images are used across different frameworks:
-	•	ubuntu:20.04 for general compatibility and system package support
-	•	Official runtime base images (e.g., openvino/ubuntu20_runtime)
-	•	python:3.9-bullseye for compatibility with SCONE and Intel SGX tooling
+	- ubuntu:20.04 for general compatibility and system package support
+	- Official runtime base images (e.g., openvino/ubuntu20_runtime)
+	- python:3.9-bullseye for compatibility with SCONE and Intel SGX tooling
 
 	⚠️ Some frameworks include sconify.sh scripts for SGX compatibility, but execution may not succeed on SGX for openvino, scikit, and numpy due to runtime limitations.
 
