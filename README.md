@@ -5,10 +5,11 @@ This repository provides minimal **"Hello, World!"** examples for several popula
 These examples are designed to:
 
 - ✅ Dockerized for reproducible, isolated testing
-- ✅ Designed for **Intel® TDX (Trust Domain Extensions)** compatibility
+- ✅ Tested and compatible with **Intel® TDX (Trust Domain Extensions)**
+- ✅ Tested on **Intel® SGX** with varying compatibility (see table below for more details)
 - ✅ Tested on the **iExec Confidential Computing infrastructure**
 
-> ⚠️ While some frameworks include a `sconify.sh` script for SGX compatibility, **execution support is currently verified only for TDX**. See notes below.
+> ⚠️ While some frameworks include a `sconify.sh` script for SGX compatibility, **execution support varies by framework**. See the table below for detailed compatibility information.
 
 ---
 
@@ -25,7 +26,7 @@ ai-frameworks-hello-world/
 ├── scikit/
 │   ├── app.py
 │   ├── Dockerfile
-│   └── sconify.sh (not working on SGX)
+│   └── sconify.sh
 ├── openvino/
 │   ├── app.py
 │   ├── Dockerfile
@@ -33,7 +34,7 @@ ai-frameworks-hello-world/
 ├── numpy/
 │   ├── app.py
 │   ├── Dockerfile
-│   └── sconify.sh (not working on SGX)
+│   └── sconify.sh
 ```
 
 Each `app.py` file contains a minimal script that initializes and runs a simple function with the corresponding framework (e.g., tensor addition, model inference, classification, etc.).
