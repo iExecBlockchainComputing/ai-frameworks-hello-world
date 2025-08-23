@@ -45,8 +45,8 @@ Each `app.py` file contains a minimal script that initializes and runs a simple 
 
 | Framework  | Version Range | Status on TDX | Notes on SGX          |
 |------------|----------------|---------------|------------------------|
-| TensorFlow | 2.19.0         | ✅ Supported   | –                      |
-| PyTorch    | 2.7.0+cu126    | ✅ Supported   | –                      |
+| TensorFlow | 2.19.0         | ✅ Supported   | ❌ Image too large to sconify (2.49GiB > 1.95GiB limit) |
+| PyTorch    | 2.7.0+cu126    | ✅ Supported   | ❌ Image too large to sconify (5.69GiB > 1.95GiB limit) |
 | Scikit-Learn | 1.6.1        | ✅ Supported   | ✅ Supported, `sconify.sh` included |
 | OpenVINO   | 2024.6.0       | ✅ Supported   | `sconify.sh` included, but execution issues on SGX |
 | NumPy      | 2.0.2          | ✅ Supported   | ✅ Supported, `sconify.sh` included |
